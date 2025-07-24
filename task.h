@@ -1,7 +1,7 @@
 #include <stdbool.h>
 
 typedef struct{
-    char title[75];
-    int completion[11];
+    char *title;
+    int *completion;
     bool status;
 }task;
