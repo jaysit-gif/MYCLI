@@ -5,3 +5,5 @@ typedef struct{
     int *completion;
     bool status;
 }task;
+
+void printtask(task a);
