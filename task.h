@@ -1,4 +1,6 @@
 #include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
 
 typedef struct{
     char *title;
@@ -10,3 +12,4 @@ typedef struct{
 #define pending  false
 
 void printtask(task a);
+char *inputline(void);
