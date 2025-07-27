@@ -6,4 +6,7 @@ typedef struct{
     bool status;
 }task;
 
+#define complete true
+#define pending  false
+
 void printtask(task a);
