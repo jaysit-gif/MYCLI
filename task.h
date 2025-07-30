@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 typedef struct{
     char *title;
     int *completion;
@@ -13,3 +14,5 @@ typedef struct{
 
 void printtask(task a);
 char *inputline(void);
+int *inputdate(int *arr);
+bool completed(int a);
