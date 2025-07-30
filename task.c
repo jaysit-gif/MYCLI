@@ -4,7 +4,7 @@
 #include <string.h>
 
 
-void printarray(int *arr,int n){
+void printarray(size_t *arr,int n){
     for(int i = 0;i<n;i++){
         printf("%d\t",arr[i]);
     }
@@ -14,7 +14,6 @@ void printtask(task a){
     printarray(a.completion,3);
     printf("\n%d",a.status);
 }
-
 
 char *inputline(void){
     size_t buffer = 24;
@@ -59,9 +58,13 @@ char *inputline(void){
     return line;
 }
 
-int *inputdate(int *arr){
+size_t *inputdate(size_t *arr){
     for(int i = 0;i<3;i++){
-        scanf("%d",&arr[i]);
+        scanf("%zu",&arr[i]);
+    }
+    if(arr[0] < 1 || arr[0] > 31 || arr[1] < 1 || arr[1] > 12 || arr[2] < 1970 || arr[2] > 2100){
+        fprintf(stderr,"INVALID DATE\n\n");
+        exit(1);
     }
     return arr;
 }
@@ -76,7 +79,7 @@ bool completed(int a){
 
 task inputtask(void){
     task t;
-    t.completion = malloc(3*sizeof(int));
+    t.completion = malloc(3*sizeof(size_t));
     if(!t.completion){
         perror("MEMORY ALLOCATION OF DATE FAILED");
         exit(1);

@@ -5,7 +5,7 @@
 
 typedef struct{
     char *title;
-    int *completion;
+    size_t *completion;
     bool status;
 }task;
 
@@ -14,6 +14,6 @@ typedef struct{
 
 void printtask(task a);
 char *inputline(void);
-int *inputdate(int *arr);
+size_t *inputdate(size_t *arr);
 bool completed(int a);
 task inputtask(void);

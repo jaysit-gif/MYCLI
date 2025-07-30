@@ -12,5 +12,6 @@ int main(void){
     }
     fprintf(f,"%s",Task.title);
     fprintf(f,"%d-%d-%d",Task.completion[0],Task.completion[1],Task.completion[2]);
+    fprintf(f,"\n%s\n\n",Task.status == complete ? "COMPLETED":"PENDING");
     return 0;
 }
