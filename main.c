@@ -7,7 +7,7 @@ int main(void){
     Task.title = p;
     int a[3] = {11,12,2024};
     Task.completion = a;
-    Task.status = true;
+    Task.status = pending;
     printtask(Task);
     return 0;
 }
