@@ -73,3 +73,18 @@ bool completed(int a){
         return pending;
     }
 }
+
+task inputtask(void){
+    task t;
+    t.completion = malloc(3*sizeof(int));
+    if(!t.completion){
+        perror("MEMORY ALLOCATION OF DATE FAILED");
+        exit(1);
+    }
+    printf("TASK TITTLE: ");
+    t.title = inputline();
+    printf("TASK COMPLETION DATE(DD/MM/YYYY): ");
+    inputdate(t.completion);
+    t.status = pending;
+    return t;
+}

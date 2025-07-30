@@ -16,3 +16,4 @@ void printtask(task a);
 char *inputline(void);
 int *inputdate(int *arr);
 bool completed(int a);
+task inputtask(void);
