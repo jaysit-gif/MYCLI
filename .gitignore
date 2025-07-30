@@ -1,0 +1,26 @@
+# Ignore text and executable files
+*.txt
+*.exe
+
+# IDE-specific junk
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs (like CLion)
+.idea/
+*.iml
+out/
+
+# Mac system files
+.DS_Store
+
+# Build artifacts
+*.o
+*.obj
+*.log
+*.tmp
+
+# Backup files
+*~
+*.bak
