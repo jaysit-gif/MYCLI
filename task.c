@@ -1,5 +1,9 @@
 #include "task.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
 void printarray(int *arr,int n){
     for(int i = 0;i<n;i++){
         printf("%d\t",arr[i]);
@@ -53,4 +57,19 @@ char *inputline(void){
     }
     free(s);
     return line;
+}
+
+int *inputdate(int *arr){
+    for(int i = 0;i<3;i++){
+        scanf("%d",&arr[i]);
+    }
+    return arr;
+}
+
+bool completed(int a){
+    if(a = 1){
+        return complete;
+    }else if(a = 0){
+        return pending;
+    }
 }
