@@ -17,3 +17,4 @@ char *inputline(void);
 size_t *inputdate(size_t *arr);
 bool completed(int a);
 task inputtask(void);
+void readtask(void);

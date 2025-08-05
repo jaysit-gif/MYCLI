@@ -91,3 +91,12 @@ task inputtask(void){
     t.status = pending;
     return t;
 }
+
+void readtask(void){
+    FILE *f;
+    char s[256];
+    f = fopen("DATA.txt","r");
+    while(fgets(s,sizeof(s),f) != NULL){
+        printf("%s",s);
+    } 
+}
