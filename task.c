@@ -84,7 +84,7 @@ task inputtask(void){
         perror("MEMORY ALLOCATION OF DATE FAILED");
         exit(1);
     }
-    printf("TASK TITTLE: ");
+    printf("TASK TITLE: ");
     t.title = inputline();
     printf("TASK COMPLETION DATE(DD/MM/YYYY): ");
     inputdate(t.completion);
