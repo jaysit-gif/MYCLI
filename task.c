@@ -100,3 +100,14 @@ void readtask(void){
         printf("%s",s);
     } 
 }
+
+void input(task t){
+    FILE *fp;
+    fp = fopen("DATA.txt","a+");
+    if(fp == NULL){
+        perror("File memory allocation Failed");
+    }
+    fprintf(fp,"%s",t.title);
+    fprintf(fp,"%d-%d-%d\n",t.completion[0],t.completion[1],t.completion[2]);
+    fprintf(fp,"%s\n\n",t.status==pending ? "PENDING":"COMPLETED");
+}
